@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>net.agilhard.example</groupId>
+    <artifactId>jpackager-maven-example</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>jpackager-maven-example-package</artifactId>
+  <packaging>jpackager</packaging>
+
+  <build>
+    <plugins>
+
+      <plugin>
+	<groupId>net.agilhard.maven.plugins</groupId>
+	<artifactId>jlink-jpackager-maven-plugin</artifactId>
+	<extensions>true</extensions>
+	<configuration>
+	  <verbose>true</verbose>
+	  <module>app/net.agilhard.example.HelloWorld</module>
+	</configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+  
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>jpackager-maven-example-app</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+  
+</project>

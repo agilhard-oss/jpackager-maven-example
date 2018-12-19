@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>net.agilhard.example</groupId>
+  <artifactId>jpackager-maven-example</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>9</maven.compiler.source>
+    <maven.compiler.target>9</maven.compiler.target>
+
+    <version.netAgilhardMaven.jpackagerMavenPlugin>1.0.0-SNAPSHOT</version.netAgilhardMaven.jpackagerMavenPlugin>
+
+    <version.orgApacheMavenPlugins.mavenJarPlugin>3.1.0</version.orgApacheMavenPlugins.mavenJarPlugin>
+
+  </properties>
+
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+	  <artifactId>jpackager-maven-plugin</artifactId>
+	  <groupId>net.agilhard.maven</groupId>
+	  <version>${version.netAgilhardMaven.jpackagerMavenPlugin}</version>
+	  <extensions>true</extensions>
+	</plugin>
+	<plugin>
+	  <groupId>org.apache.maven.plugins</groupId>
+	  <artifactId>maven-jar-plugin</artifactId>
+	  <version>${version.orgApacheMavenPlugins.mavenJarPlugin}</version>
+	</plugin>	
+      </plugins>	
+    </pluginManagement>
+  </build>
+  
+  <modules>
+    <module>jpackager-maven-example-app</module>
+    <module>jpackager-maven-example-package</module>
+  </modules>
+  
+</project>
