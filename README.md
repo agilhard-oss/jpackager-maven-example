@@ -9,7 +9,7 @@ Sample project for the jlink-jpackager-maven-plugin
 - [Docker](https://www.docker.com/)
 - [jlink-jpackager-maven-plugin](https://github.com/agilhard-oss/jlink-jpackager-maven-plugin)
 
-You need to use the special JDK-12 Early Access build that includes JPackager support to use this goal.
+You need to use the special JDK-12 Early Access build that includes JPackager support to use this example.
 
 This JPackager JDK-12 Early Access build can be downloaded from 
 [https://jdk.java.net/jpackage/](https://jdk.java.net/jpackage/)
